@@ -13,12 +13,14 @@ import Head from "next/head";
 | project        | description                                                                |
 | :------------- | :------------------------------------------------------------------------- |
 | [docs]         | the next framework has been configured to render .mdx files [docs][how-to] |
+| [rtl-examples] | a collection of components and tests                                       |
 | [rtl-ninja]    | test a simple todo app which utilizes a todo api                           |
 | [rtl-taskhero] | test a simple todo app which utilizes a todo api                           |
 
 [docs]: http://localhost:3000
-[rtl-ninja]: http://localhost:3001
-[rtl-taskhero]: http://localhost:3002
+[rtl-examples]: http://localhost:3001
+[rtl-ninja]: http://localhost:3002
+[rtl-taskhero]: http://localhost:3003
 [how-to]: https://stackoverflow.com/questions/71864146/using-remark-and-rehype-plugins-with-mdx-in-next-js-with-next-mdx
 
 ## COMMANDS
