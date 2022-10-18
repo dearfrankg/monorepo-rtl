@@ -3,19 +3,19 @@
 exports[`ex1 <Home /> --- uses jest snapshots rendering component matches snapshot 1`] = `
 <div>
   <div
-    class="container"
+    style="display: flex; justify-content: center; align-items: flex-start; text-align: center;"
   >
     <main>
-      <h1
-        class="title"
-      >
-        Testing Library React Examples
+      <h1>
+        React Testing Library Examples
       </h1>
-      <pre>
+      <span
+        class="ant-typography"
+      >
         <code>
           cd app_dir; yarn test
         </code>
-      </pre>
+      </span>
     </main>
   </div>
 </div>

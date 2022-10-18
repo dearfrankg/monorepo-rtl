@@ -25,7 +25,7 @@ const runTimers = () => {
   });
 };
 
-describe("Directory Tree", () => {
+describe("ex4 --- <Tree />", () => {
   beforeAll(() => {
     jest.useFakeTimers();
   });

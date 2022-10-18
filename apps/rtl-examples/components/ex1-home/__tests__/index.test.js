@@ -15,7 +15,7 @@ describe("ex1 <Home /> --- uses jest snapshots", () => {
     render(<Home />);
 
     const heading = screen.getByRole("heading", {
-      name: /Testing Library React Examples/i,
+      name: /React Testing Library Examples/i,
     });
 
     expect(heading).toBeInTheDocument();

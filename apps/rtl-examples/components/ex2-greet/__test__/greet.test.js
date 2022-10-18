@@ -1,6 +1,6 @@
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Greet from "@/components/ex2-greet";
 
@@ -26,9 +26,9 @@ describe("ex2 <Greet /> --- uses msw and useReducer", () => {
       render(<Greet url="/greeting" />);
 
       fireEvent.click(screen.getByText("Load greeting with axios"));
-      await screen.findByRole("heading");
+      await screen.findByRole("heading", { name: /hello there/i });
 
-      expect(screen.getByRole("heading")).toHaveTextContent("hello there");
+      expect(screen.getAllByRole("heading")[1]).toHaveTextContent("hello there");
       expect(screen.getAllByRole("button")[0]).toBeDisabled();
     });
 
@@ -43,7 +43,7 @@ describe("ex2 <Greet /> --- uses msw and useReducer", () => {
       fireEvent.click(screen.getByText("Load greeting with axios"));
       await screen.findByRole("alert");
 
-      expect(screen.getByRole("alert")).toHaveTextContent("Oops, failed to fetch!");
+      expect(screen.getByRole("alert")).toHaveTextContent("Oops, failed to get greeting");
       expect(screen.getAllByRole("button")[0]).not.toBeDisabled();
     });
   });
@@ -53,9 +53,9 @@ describe("ex2 <Greet /> --- uses msw and useReducer", () => {
       render(<Greet url="/greeting" />);
 
       fireEvent.click(screen.getByText("Load greeting with fetch"));
-      await screen.findByRole("heading");
+      await screen.findByRole("heading", { name: /hello there/i });
 
-      expect(screen.getByRole("heading")).toHaveTextContent("hello there");
+      expect(screen.getAllByRole("heading")[1]).toHaveTextContent("hello there");
       expect(screen.getAllByRole("button")[1]).toBeDisabled();
     });
 
@@ -70,7 +70,7 @@ describe("ex2 <Greet /> --- uses msw and useReducer", () => {
       fireEvent.click(screen.getByText("Load greeting with fetch"));
       await screen.findByRole("alert");
 
-      expect(screen.getByRole("alert")).toHaveTextContent("Oops, failed to fetch!");
+      expect(screen.getByRole("alert")).toHaveTextContent("Oops, failed to get greeting");
       expect(screen.getAllByRole("button")[1]).not.toBeDisabled();
     });
   });
