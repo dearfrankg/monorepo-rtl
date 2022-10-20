@@ -26,7 +26,7 @@ import Head from "next/head";
 
 ## COMMANDS FOR ALL WORKSPACES
 
-- run all workspaces in dev mode `yarn dev`
+- run all workspaces in dev mode <code>yarn dev</code>
 - start all workspaces in production mode `yarn start`
 - build all workspaces `yarn build`
 - lint all workspaces `yarn lint`
