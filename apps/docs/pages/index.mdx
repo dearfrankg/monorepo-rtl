@@ -2,9 +2,14 @@ import Head from "next/head";
 
 <Head>
   <title>MONOREPO-RTL</title>
+  <script>foo = 55</script>
 </Head>
 
 # MONOREPO-RTL
+
+```js
+const foo = 55;
+```
 
 ## INTRO
 
@@ -28,13 +33,13 @@ import Head from "next/head";
 
 ## COMMANDS FOR ALL WORKSPACES
 
-- run all workspaces in dev mode <Code>yarn dev</Code>
-- start all workspaces in production mode <Code>yarn start</Code>
-- build all workspaces <Code>yarn build</Code>
-- lint all workspaces <Code>yarn lint</Code>
-- test all workspaces <Code>yarn test</Code>
+- <Code>yarn dev</Code> run all workspaces in dev mode
+- <Code>yarn start</Code> start all workspaces in production mode
+- <Code>yarn build</Code> build all workspaces
+- <Code>yarn lint</Code> lint all workspaces
+- <Code>yarn test</Code> test all workspaces
 
 ## COMMANDS FOR SINGLE WORKSPACES
 
-- run a single workspace in dev mode <Code>yarn workspace -name- dev</Code>
-- start a single workspace <Code>yarn workspace -name- start</Code>
+- <Code>yarn workspace -name- dev</Code> run a single workspace in dev mode
+- <Code>yarn workspace -name- start</Code> start a single workspace in production mode
