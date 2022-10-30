@@ -1,4 +1,5 @@
 import "antd/dist/antd.css";
+import "../globals.css";
 import { MDXProvider } from "@mdx-js/react";
 import { Typography } from "antd";
 import Highlight, { defaultProps } from "prism-react-renderer";
